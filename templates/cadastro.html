@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Teste HTML</title>
+</head>
+<body>
+    <h1>Inicio Jogo</h1>
+
+
+    <form action="/" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome: " required>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Seu email: " required>
+        <button type="submit">Logars</button>
+    
+    <!-- % É um bloco-->
+    {% if mensagem %} 
+    <p class="mensagem">{{ mensagem }}</p>
+    <a href="/jogo">
+        <button type = "button">Ir para o jogo</button>
+    </a>
+    <br><br>
+    {% endif %}
+</body>
+</html>
